@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B1866F711C9254F000378A5D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1866F701C9254F000378A5D /* main.swift */; };
+		B1866F7A1C92560500378A5D /* ESObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1866F791C92560500378A5D /* ESObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B1866F7C1C92643600378A5D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1866F7B1C92643500378A5D /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		B1866F6D1C9254F000378A5D /* EzTestLazyVarReference */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EzTestLazyVarReference; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1866F701C9254F000378A5D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B1866F771C92560500378A5D /* EzTestLazyVarReference-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EzTestLazyVarReference-Bridging-Header.h"; sourceTree = "<group>"; };
+		B1866F781C92560500378A5D /* ESObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESObject.h; sourceTree = "<group>"; };
+		B1866F791C92560500378A5D /* ESObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESObject.m; sourceTree = "<group>"; };
+		B1866F7B1C92643500378A5D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				B1866F701C9254F000378A5D /* main.swift */,
+				B1866F7B1C92643500378A5D /* Common.swift */,
+				B1866F781C92560500378A5D /* ESObject.h */,
+				B1866F791C92560500378A5D /* ESObject.m */,
+				B1866F771C92560500378A5D /* EzTestLazyVarReference-Bridging-Header.h */,
 			);
 			path = EzTestLazyVarReference;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1866F7A1C92560500378A5D /* ESObject.m in Sources */,
+				B1866F7C1C92643600378A5D /* Common.swift in Sources */,
 				B1866F711C9254F000378A5D /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,14 +221,21 @@
 		B1866F751C9254F000378A5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EzTestLazyVarReference/EzTestLazyVarReference-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B1866F761C9254F000378A5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EzTestLazyVarReference/EzTestLazyVarReference-Bridging-Header.h";
 			};
 			name = Release;
 		};
